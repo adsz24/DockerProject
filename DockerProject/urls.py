@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from Doject.views import home
+from Doject.views import product_catalog
 
-urlpatterns = [                     #url ktory dodaje widok home
+urlpatterns = [                     #urlsy ktore dodaja widoki: home
+    path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('', product_catalog, name='product_catalog')
 ]
 
