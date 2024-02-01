@@ -1,0 +1,24 @@
+/*Style*/
+
+body {
+    background-color: #8a2be2;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-transform: none;
+    text-shadow: 4px 4px 8px #4b0082;
+}
+
+h2 {
+    text-align: center;
+    text-transform: none;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
