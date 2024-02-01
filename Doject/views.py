@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Create your views here.
 
-def home(request):
+def home(request):                          #Funkcja dodajaca widok dla strony glownej
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
     return render(
