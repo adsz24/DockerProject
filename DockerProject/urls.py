@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from Doject.views import home
 
-urlpatterns = [
+urlpatterns = [                     #url ktory dodaje widok home
     path('', home, name='home'),
 ]
 
