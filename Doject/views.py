@@ -22,7 +22,7 @@ def product_catalog(request):                       #Funkcja pobieraj¹ca dane z 
     products = Product.objects.all()
     return render(
         request,
-       'Doject/index.html', 
+       'Doject/catalogg.html', 
        {
            'products': products,
        }
