@@ -20,6 +20,6 @@ from Doject.views import home, product_catalog
 urlpatterns = [                     #urlsy ktore dodaja widoki: home
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('catalog/', product_catalog, name='product_catalog'),
+    path('produkty/', product_catalog, name='product_catalog'),
 ]
 

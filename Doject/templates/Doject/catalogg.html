@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doject katalog</title>
+    <title>Doject produkty</title>
     {% load static %}           <!--  zaladowanie stylow z katalogu static  -->
     <link rel="stylesheet" type="text/css" href="{% static 'Doject/styles.css' %}" />           <!--  Dodanie sciezki do korzystania ze stylow css  -->
 </head>
 <body>
-    <h1>Katalog</h1>
+    <h1>NASZE PRODUKTY</h1>
     <ul>
         {% for product in products %}
         <li>{{ product.name }}</li>
