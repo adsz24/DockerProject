@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
 from datetime import datetime
 from .models import Product
+from django_filters.views import FilterView
+from .filters import ProductFilter
 
 
 # Create your views here.
@@ -27,3 +29,8 @@ def product_catalog(request):                       #Funkcja pobieraj¹ca dane z 
            'products': products,
        }
     )
+
+class product_filter(FilterView):
+    model = Product
+    template_name = 'Doject/search.html'
+    filterset_class = ProductFilter
