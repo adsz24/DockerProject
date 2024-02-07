@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from Doject.views import home
-from Doject.views import product_catalog
+from Doject.views import home, product_catalog, product_filter
 
 urlpatterns = [                     #urlsy ktore dodaja widoki: home
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('', product_catalog, name='product_catalog')
+    path('produkty/', product_catalog, name='product_catalog'),
+    path('szukaj/', product_filter.as_view(), name='product_filter'),
 ]
 
