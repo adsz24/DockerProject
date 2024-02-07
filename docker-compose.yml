@@ -1,0 +1,29 @@
+version: '3'
+
+volumes:
+  local_mysql_data: {}
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Naczosekflosek!
+      MYSQL_DATABASE: mysqlprojekt
+      MYSQL_USER: NaczosekFlosek!
+      MYSQL_PASSWORD: Naczosekflosek!
+    volumes:
+      - local_mysql_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
