@@ -25,7 +25,7 @@ SECRET_KEY = 'b==cb1!6c6s&$ctl+e$^9hzv*fqk1mactmspow!sxb%1nd3d0e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,11 +81,12 @@ DATABASES = {
         'NAME': 'mysqlprojekt',
         'USER': 'root',
         'PASSWORD': 'Naczosekflosek!',
-        'HOST': '127.0.0.1',
+        'HOST': 'mysql',
         'PORT': '3306',
     }
 }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
