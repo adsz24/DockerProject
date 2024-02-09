@@ -16,13 +16,13 @@ Aby odpaliæ projekt bêdzie potrzebna baza danych Mysqsl.
  
 ## Uruchomienie projektu
  
-1. Sklonuj ten repozytorium do swojego lokalnego œrodowiska:
+1. Sklonuj to repozytorium do swojego lokalnego œrodowiska:
  
     ```
     git clone https://github.com/adsz24/DockerProject.git
     ```
  
-2. PrzejdŸ do katalogu projektu:
+2. Upewnij siê, ¿e masz uruchomiony terminal i upewnij siê, ¿e jesteœ w katalogu projektu, jeœli nie wpisz polecenie
  
     ```
     cd dockerprojekt
@@ -40,50 +40,52 @@ Aby odpaliæ projekt bêdzie potrzebna baza danych Mysqsl.
     python manage.py migrate
     ```
  
-5.  Wywo³aj w terminalu polecenie (po uruchomieniu tego polecenia bêdziesz musia³ nadaæ swój login i has³o oraz mail dla konta admina)
- 
-    ```
-    python manage.py createsuperuser
-    ```
- 
-6. Jeœli chcesz mo¿esz dodaæ produkty skyptem, aby to wykonaæ wpisz w terminalu polecenie. Bêdziesz móg³ równie¿ dodaæ produkty póŸniej ,ale w inny sposób.
- 
-    ```
-    python addproducts.py
-    ```
- 
-7. Zbuduj obrazy w docker za pomoc¹
+5. Zbuduj obrazy w docker za pomoc¹
  
     ```
     docker-compose build
     ```
  
-8.  Uruchom kontenery za pomoc¹
+6.  Uruchom kontenery za pomoc¹
  
     ```
     docker-compose up
     ```
  
-9.  Wyœwietli siê informacja ,¿e kontener zosta³ zatrzymany aby umo¿liwiæ mu dalszy ci¹g dzia³ania w pliku settings.py w databases nalezy zmieniæ host z 127.0.0.1 na mysql
+7.  Wyœwietli siê informacja ,¿e kontener zosta³ zatrzymany. Anuluj akcjê 
+
+    ```
+    Ctrl+C
+    ```
+
+    Aby umo¿liwiæ mu dalszy ci¹g dzia³ania w pliku settings.py w databases nalezy zmieniæ host z '127.0.0.1' na 'mysql'i zapisaæ zmiany
    
     ```
-    ctrl+s
+    Ctrl+s
     ```
  
-10. Uruchom kontenery ponownie za pomoc¹
+8. Uruchom kontenery z terminalu ponownie za pomoc¹
    
     ```
     docker-compose up
     ```
  
-11. Po zakoñczeniu budowania kontenerów i uruchomieniu aplikacji, otwórz przegl¹darkê internetow¹ i przejdŸ pod adres:
+9. Po zakoñczeniu budowania kontenerów i uruchomieniu aplikacji, otwórz przegl¹darkê internetow¹ i przejdŸ pod adres:
  
     ```
     http://localhost:8000
     ```
  
-12. Jeœli chcesz dodaæ produkty przejdŸ do strony administratora
+10. Jeœli chcesz dodaæ produkty przejdŸ do strony administratora
  
     ```
     http://localhost:8000/admin
+    ```
+
+11. PrzejdŸ na te adresy, przegl¹daj katalog produktów lub jeœli chcesz skorzystaj z wyszukiwarki produktów
+ 
+    ```
+    http://localhost:8000/produkty
+    ```
+    http://localhost:8000/szukaj
     ```
